@@ -1,13 +1,13 @@
-module Bootstrap
+module Bootstrap2
   class FrameworkNotFound < StandardError; end
 
   # Inspired by Kaminari
   def self.load!
     if compass?
-      require 'bootstrap-sass/compass_functions'
+      require 'bootstrap-sass-2/compass_functions'
       register_compass_extension
     elsif asset_pipeline?
-      require 'bootstrap-sass/sass_functions'
+      require 'bootstrap-sass-2/sass_functions'
     end
 
     if rails?
@@ -16,7 +16,7 @@ module Bootstrap
     end
 
     if !(rails? || compass?)
-      raise Bootstrap::FrameworkNotFound, "bootstrap-sass requires either Rails > 3.1 or Compass, neither of which are loaded"
+      raise Bootstrap::FrameworkNotFound, "bootstrap-sass-2 requires either Rails > 3.1 or Compass, neither of which are loaded"
     end
     
     stylesheets = File.expand_path(File.join("..", 'vendor', 'assets', 'stylesheets'))
@@ -44,7 +44,7 @@ module Bootstrap
   end
 
   def self.register_rails_engine
-    require 'bootstrap-sass/engine'
+    require 'bootstrap-sass-2/engine'
   end
 end
 
