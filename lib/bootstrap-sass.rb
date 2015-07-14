@@ -48,4 +48,4 @@ module Bootstrap2
   end
 end
 
-Bootstrap.load!
+Bootstrap2.load!
