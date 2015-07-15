@@ -15,5 +15,5 @@ end
 
 # Javascripts
 %w(affix alert button carousel collapse dropdown modal popover scrollspy tab tooltip transition typeahead).each do |file|
-  javascript "#{basedir}/javascripts/bootstrap-#{file}.js", :to => "bootstrap-#{file}.js"
+  javascript "#{basedir}/javascripts/bootstrap2-#{file}.js", :to => "bootstrap2-#{file}.js"
 end
